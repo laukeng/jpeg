@@ -1,40 +1,22 @@
 # jpeg
 
 #### 介绍
-使用Python对jpg图片批量进行：
-1.Exif时间修复
-2.根据Exif信息对图片重命名
-3.压缩
+使用Python对jpg图片进行批量处理：
+1. 修复Exif时间
+2. 根据Exif信息对图片重命名
+3. 压缩图片（保留原始Exif信息）
 
-#### 软件架构
-软件架构说明
+#### 依赖的库
+需要安装PIL和piexif：
+pip install pillow
+pip install piexif
 
+#### 使用方法
+1.  修改全局常量 WORK_DIR 设置工作目录
+2.  设置错误时间列表 BAD_TIME
+3.  fix_exifs() # 批量修复Exif时间
+4.  rename_jpgs() # 根据Exif信息批量重命名
+5.  zip_jpgs() # 压缩图片
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 安卓手机
+使用 Pydroid 3

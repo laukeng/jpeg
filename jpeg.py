@@ -8,7 +8,6 @@ from PIL import ExifTags, Image
 
 
 # WORK_DIR = '/storage/emulated/0/DCIM/Camera'
-# WORK_DIR = '/storage/emulated/0/Pictures/Mi2S'
 WORK_DIR = 'D:\\手机相册\\Sony Z1'
 JPG_FILTER = os.path.join(WORK_DIR, '*.[jJ][pP][gG]')
 BAD_TIME = ['2002:12:08 12:00:00']
@@ -23,7 +22,6 @@ def get_exif_time(file):
             for k, v in img._getexif().items()
             if k in ExifTags.TAGS
         }
-        # print(exif)
         date_time = exif['DateTime']
     except Exception as err:
         print(err)
@@ -37,7 +35,6 @@ def fix_exif_time(file):
     exif_dict = {}
     try:
         exif_dict = piexif.load(file)
-        # print(exif_dict)
         if 41729 in exif_dict['Exif']:
             exif_dict['Exif'][41729] = b'1'
     except Exception as err:
@@ -175,7 +172,6 @@ def zip_jpgs():
 
 
         for file in glob.glob(JPG_FILTER):
-            # print(os.path.split(file)[1])
             filecount += 1
             if os.path.split(file)[1] in zipped:
                 print(os.path.split(file)[1], 'Already Zipped', '(%d/%d)' % (filecount, filetotal))
@@ -186,6 +182,6 @@ def zip_jpgs():
                 print('%s %d --> %d (%d/%d)' % (os.path.split(file)[1], filesize, new_size, filecount, filetotal))
 
 
-fix_exifs()
-rename_jpgs()
-zip_jpgs()
+# fix_exifs()
+# rename_jpgs()
+# zip_jpgs()
