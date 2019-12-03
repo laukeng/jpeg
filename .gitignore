@@ -115,4 +115,5 @@ dmypy.json
 .pyre/
 
 # debug json
+jpeg.py
 exif.json
