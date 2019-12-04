@@ -1,7 +1,7 @@
 import glob
 import os
 import traceback
-from PIL import Image
+from PIL import ExifTags, Image
 
 
 # WORK_DIR = '/storage/emulated/0/DCIM/Camera'
