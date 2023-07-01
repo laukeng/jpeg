@@ -5,7 +5,8 @@ from PIL import ExifTags, Image
 
 
 # WORK_DIR = '/storage/emulated/0/DCIM/Camera'
-WORK_DIR = 'D:\\Pictures\\Sony Z1'
+# WORK_DIR = 'D:\\Pictures\\Sony Z1'
+WORK_DIR = os.path.dirname(__file__)
 JPG_FILTER = os.path.join(WORK_DIR, '*.[jJ][pP][gG]')
 
 
